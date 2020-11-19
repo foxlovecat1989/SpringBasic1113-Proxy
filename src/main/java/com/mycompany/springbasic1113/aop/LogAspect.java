@@ -12,7 +12,7 @@ public class LogAspect {
     
     // 前置通知(Advice)
     @Before(value = 
-            "execution(public int com.mycompany.springbasic1106.aop.CalcImpl.add(int, int))") // 切入點表達式
+            "execution(public int com.mycompany.springbasic1113.aop.CalcImpl.add(int, int))") // 切入點表達式
     public void before(){
         System.out.println("before...");
     }
