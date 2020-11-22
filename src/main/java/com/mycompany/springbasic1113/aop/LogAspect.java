@@ -4,6 +4,7 @@ import java.util.Arrays;
 import jdk.nashorn.internal.runtime.regexp.JoniRegExp;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -41,5 +42,12 @@ public class LogAspect {
     @After(value = "cut()")
     public void after(){
         System.out.println("After...");
+    }
+    
+    // 返回通知(Advice)
+    // 獲取返回值
+    @AfterReturning(value = "cut()", returning = "result")
+    public void afterReturning(Object result){
+        System.out.printf("AfterReturning -> result = %s\n", result);
     }
 }
