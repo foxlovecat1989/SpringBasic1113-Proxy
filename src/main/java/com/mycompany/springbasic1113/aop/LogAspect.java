@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 @Order
 public class LogAspect {
     
-    @Pointcut(value = "execution(* com.mycompany.springbasic1113.aop.*.* (..) )")
+    @Pointcut(value = "execution(* com.mycompany.springbasic1113.aop.CalcImpl.* (..) )")
     public void cut(){
     }
     
